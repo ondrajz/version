@@ -26,10 +26,11 @@ assigning them during compilation using `-X importpath.name=value` flag of [go l
 
 ## Quick start
 
-1. Run `ln -s $GOPATH/src/github.com/TrueFurby/version` in the directory of your main package to create a symlink to the version package. 
-This will provide cleaner way for importing package and compiling binary.
-2. Use `go build -ldflags "$(sh version/ldflags.sh)"` when building your executable to assign all version information.
-3. Now you can refer to the exported variables wherever you need them.
+1. Run `go get -u github.com/TrueFurby/version` to download this package.
+2. In the directory of your main package, run `ln -s $GOPATH/src/github.com/TrueFurby/version` 
+   to create a symlink to the version package. This will provide cleaner way for importing and compiling.
+3. Use `go build -ldflags "$(sh version/ldflags.sh)"` when building your executable to assign all version information.
+4. Now you can simply refer to the exported variables which will contain assigned information wherever you need them.
 
 ## Usage example
 
