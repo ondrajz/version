@@ -3,8 +3,10 @@ Version package helps to automate process of versioning Go executables by
 using information from *git repository* and *build environment* and 
 assigning them during compilation using `-X importpath.name=value` flag of [go link tool](https://golang.org/cmd/link/).
 
-## Assigned information
+#### Concatenated form
+> v0.6.3+35-dev-0788ff2 (2016/02/05-22:10) built on furby@beast (go1.5.1 linux-amd64) at Sat Feb 06 09:52:22 UTC 2016
 
+## Assigned info
 - **version.Number**
   - the most recent annotated tag
   - if the last commit doesn't point to the tag, `+N` is added where N is number of commits since the tag
@@ -21,8 +23,6 @@ assigning them during compilation using `-X importpath.name=value` flag of [go l
   - time of building the executable
 - **version.Long**
   - all information concatenated into long form
-
-> v0.6.3+35-dev-0788ff2 (2016/02/05-22:10) built on furby@beast (go1.5.1 linux-amd64) at Sat Feb 06 09:52:22 UTC 2016
 
 ## Quick start
 
